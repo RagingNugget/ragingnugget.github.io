@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+<head>
+    <title>Registrator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="navbar bg-primary text-primary-content flex justify-center">
+        <a class="btn btn-ghost normal-case text-xl" onclick="navBarPress('math'); changeStep(0)">Math Department</a>
+        <a class="btn btn-ghost normal-case text-xl" onclick="navBarPress('language'); changeStep(16)">World Language Department</a>
+        <a class="btn btn-ghost normal-case text-xl">Science Department</a>
+        <a class="btn btn-ghost normal-case text-xl">Language Arts Department</a>
+        <a class="btn btn-ghost normal-case text-xl">Fine Arts Department</a>
+        <a class="btn btn-ghost normal-case text-xl">Electives</a>
+    </div>
+
+    <div class="flex justify-center mt-14" id="math">
+        <ul class="steps">
+            <li class="step step-primary" onclick="changeStep(0)">Algebra 1A Geometry A</li>
+            <li class="step" onclick="changeStep(1)">Geometry B Algebra 1B</li>
+            <li class="step" onclick="changeStep(2)">Geometry</li>
+            <li class="step" onclick="changeStep(3)">Algebra 2</li>
+            <li class="step" onclick="changeStep(4)">College Algebra</li>
+            <li class="step" onclick="changeStep(5)">College Trigonometry</li>
+            <li class="step" onclick="changeStep(6)">Pre-Calculus</li>
+            <li class="step" onclick="changeStep(7)">AP Statistics</li>
+            <li class="step" onclick="changeStep(8)">AP Calculus AB</li>
+            <li class="step" onclick="changeStep(9)">AP Calculus BC</li>
+            <li class="step" onclick="changeStep(10)">Calculus III</li>
+            <li class="step" onclick="changeStep(11)">Differential Equations</li>
+        </ul>
+    </div>
+
+    <div class="flex justify-center py-8" id="language">
+    <div class="px-20">   
+        <ul class="steps steps-vertical">
+            <li class="step" onclick="changeStep(12)">French 1</li>
+            <li class="step" onclick="changeStep(13)">French 2</li>
+            <li class="step" onclick="changeStep(14)">French 3</li>
+            <li class="step" onclick="changeStep(15)">French Level 4</li>
+        </ul>
+    </div>
+        <ul class="steps steps-vertical">
+            <li class="step step-primary" onclick="changeStep(16)">Spanish 1</li>
+            <li class="step" onclick="changeStep(17)">Spanish 2</li>
+            <li class="step" onclick="changeStep(18)">Spanish 3</li>
+            <li class="step" onclick="changeStep(19)">Spanish 4</li>
+            <li class="step" onclick="changeStep(20)">Spanish Advanced Communication</li>
+        </ul>
+    <div class="px-2">
+        <ul class="steps steps-vertical">
+            <li class="step" onclick="changeStep(21)">German 1</li>
+            <li class="step" onclick="changeStep(22)">German 2</li>
+            <li class="step" onclick="changeStep(23)">German 3</li>
+            <li class="step" onclick="changeStep(24)">German 4</li>
+        </ul>
+    </div>
+    </div>
+    
+
+    <div class="hero mt-14 bg-base-100" id="0" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Algebra 1A Geometry A</h1>
+            <p class="py-4">Algebra 1A and Geometry A are typically taken in 8th grade so only possible to get this class if you failed 8th grade Algebra.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="1" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+     
+    <div class="hero mt-14 bg-base-100" id="1">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Geometry B Algebra 1B</h1>
+            <p class="py-4">This class's homework and difficulty is not much. Much of the work is relatively simple geometry and some difficult Algebra at times.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="5" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="2">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Geometry (OPTIONAL)</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="10" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="3">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Algebra 2</h1>
+            <p class="py-4">Algebra 2 gets deep into algebraic functions and math, but isn't the most difficult for the average person. The home work is more than Algebra 1.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="11" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="hero mt-14 bg-base-100" id="4">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">College Algebra</h1>
+            <p class="py-4">Most difficult "algebra" class effectively algebra 2 with more homework and more difficult equations. For example "find f(1/100) if f(x)=log10x"</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="21" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="5">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">College Trigonometry</h1>
+            <p class="py-4">Most work is on shapes and graphs. Big amounts of homework, and advanded equations.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="48" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="6">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Pre-Calculus</h1>
+            <p class="py-4">Focus on studying many advanced parts of geometry. There begins full sheets of paper dedicated to single questions. The class is challenging</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="54" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="7">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">AP Statistics (OPTIONAL)</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="40" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="8">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">AP Calculus AB</h1>
+            <p class="py-4">Single questions will take up an entire sheet of paper. The class requires good memory, dedication, and focus to succeed</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="55" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="9">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">AP Calculus BC</h1>
+            <p class="py-4">Class is much more difficult as it tackles the harder parts of calculus.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="70" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="10">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Calculus III</h1>
+            <p class="py-4">The class is not too much harder than the one before. It is easier to keep the same grade in this class than in the class before.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="69" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="11">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Differential Equations</h1>
+            <p class="py-4">The HARDEST class offered at Fossil Ridge. Requires dedication, genius, and time.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="100" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="12" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">French 1</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="35" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="13" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">French 2</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="45" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="14" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">French 3</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="55" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="15" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">French Level 4</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="60" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="16" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Spanish 1</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="30" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="17" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Spanish 2</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="25" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="18" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Spanish 3</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="30" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="19" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Spanish 4</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="40" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="20" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">Spanish Advanced Communication</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="50" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="21" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">German 1</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="50" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="22" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">German 2</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="45" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="23" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">German 3</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="35" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="hero mt-14 bg-base-100" id="24" >
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-3xl font-bold">German 4</h1>
+            <p class="py-4">assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <div tabindex="0">
+                <div class="flex items-center p-1">
+                    <span class="text-base-content/70 w-48 text-xs">Average Difficulty</span>
+                        <progress max="100" value="60" class="progress progress-primary"></progress>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>
+
+ <script>
+    $('#language').hide()
+   
+    var children = $('.steps').children();
+    var ids = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    ids.forEach(id => {
+        $('#' + id).hide()
+    });
+
+    for (var o = 12; o <= 24; o++) {
+    $('#' + o).hide()
+    }
+    
+
+
+    function changeStep(num) {                                  //ALL IF STATEMENTS ARE ISOLATED AND SHOULD BE ABLE TO SCALE; FORGET ABOUT THEM
+        for (var i = 0; i < children.length; i++) {             //first if and loop are segmented for the math department
+            let el = children[i];                               //the if statements block the argument from running if the 
+            if (i <= num && num <= 11) {                        //parameters are more than 12
+            $(el).attr('class', 'step step-primary');           
+           } else if (num <= 12) {
+            $(el).attr('class', 'step');
+           }
+
+           if ((i <= num && num > 11) && num <= 15) {           //for world lang department France, if statments block
+            $(el).attr('class', 'step step-primary');           //arguments if parameters are more than 15
+           } else if (num > 11) {
+            $(el).attr('class', 'step');
+           }
+
+           if ((i <= num && num > 15) && num <= 20) {           //for world lang department Spain, if statments block
+            $(el).attr('class', 'step step-primary');           //arguments if parameters are more than 20
+            for (var p = 12; p <= 15; p++) {
+            $(children[p]).attr('class', 'step');
+            }
+           } else if (num > 15) {
+            $(el).attr('class', 'step');
+           }
+
+           if ((i <= num && num > 20) && num <= 24) {           //for world lang department German, if statements block
+            $(el).attr('class', 'step step-primary');           //arguments if parameters are more than 24
+            for (var c = 12; c <= 20; c++) { 
+            $(children[c]).attr('class', 'step');
+            }
+           } else if (num > 20) {
+            $(el).attr('class', 'step');
+           }
+
+
+
+           if (i == num) {                                      //takes the for loop var and checks the input parameter
+            $('#' + i).show()                                   //if they align it shows information about input num
+           } else {                                             //else it hides the id information
+            $('#' + i).hide()
+           }
+        }
+    }
+    
+    function navBarPress(select) {                              //navBarPress function checks the input string
+    if (select == 'math') {                                     //if the string is lang it hides all of the math page 
+        $('#math').show()                                       //and shows the lang page
+    } else {
+        $('#math').hide()
+        $('#0').hide()
+        ids.forEach(id => {
+        $('#' + id).hide()
+        });
+    }
+    if (select == 'language') {
+        $('#language').show()
+    } else {
+        $('#language').hide()
+    }
+    }
+    </script>
+</body>
+</html>
